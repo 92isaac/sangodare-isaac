@@ -62,7 +62,7 @@ for (let i = 0; i < navLi.length; i++) {
 
   // TEXT EFFECT
   // TEXT ARRAY
-  const dataText = ["Web/ Sotware Developer", "Content Developer", "Health and Safety Engineer", "Planning Advisor"];
+  const dataText = ["Sotware Developer", "Instructor", "Health and Safety Engineer", "Planning Advisor"];
   document.addEventListener("DOMContentLoaded", typingEffect);
 
   function typingEffect() {
@@ -97,6 +97,17 @@ for (let i = 0; i < navLi.length; i++) {
   startTextAnimation(0);
 }
 
-function sendEmail(){
-  window.location= "mailto:sangodareisaac92@gmail.com"
+// function sendEmail(){
+//   window.location= "mailto:sangodareisaac92@gmail.com"
+// }
+
+
+function sendMail() {
+  let link = "mailto:sangodareisaac92@gmail.com"
+           + "?cc=myCCaddress@example.com"
+           + "&subject=" + encodeURIComponent("This is my subject")
+           + "&body=" + encodeURIComponent(document.getElementById('myText').value)
+  ;
+  
+  window.location.href = link;
 }
